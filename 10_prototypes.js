@@ -46,13 +46,44 @@
 
 
 // ===========  Object.create()
-const proto = {
-    year: 2222,
-};
+// const proto = {
+//     year: 2222,
+// };
+//
+// const myYear = Object.create(proto);
+// proto.year = 1111;
+//
+// console.log(myYear.year)
+// console.log(myYear.hasOwnProperty('year'))
+// console.log(myYear.__proto__ === proto)
 
-const myYear = Object.create(proto);
-proto.year = 1111;
+// ============== Advanced https://www.youtube.com/watch?v=aQkgUUmUJy4&list=PLqKQF2ojwm3l4oPjsB9chrJmlhZ-zOzWT
+// const person = {
+//     name: 'Igor',
+//     age: 25,
+//     greet: function () {
+//         console.log(`Greet!`)
+//     }
+// }
 
-console.log(myYear.year)
-console.log(myYear.hasOwnProperty('year'))
-console.log(myYear.__proto__ === proto)
+// console.log(person.name);
+// console.log(person.age);
+// person.greet()
+// console.log(person.toString())
+
+const person = new Object({
+    name: 'Igor',
+    age: 25,
+    greet: function () {
+        console.log(`Greet!`)
+    }
+})
+
+Object.prototype.sayHello = function () {
+    console.log(`Hello..`)
+}
+
+const Elena = Object.create(person);
+
+// const str = 'I am string';
+const str = new String('I am string');

@@ -31,6 +31,7 @@ if (language) {
 }
 
 // false values '', 0, null, undefined, false, NaN
+// console.log(Boolean(NaN));
 // console.log(Boolean(''));
 // console.log(Boolean('Hi'));
 // console.log(Boolean(' '));

@@ -1,0 +1,8 @@
+/*box-model*/
+.container{
+    width: 100%;
+}
+
+.social {
+    background: red;
+}

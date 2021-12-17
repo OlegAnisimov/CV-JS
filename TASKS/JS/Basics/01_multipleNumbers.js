@@ -1,23 +1,19 @@
 function multiple(a, b) {
-    (typeof  a !== 'number' || typeof b !== 'number') ? console.log(`a & b must be numbers`) : privateMultiple(a, b);
+    let result = 1;
 
-    // if (typeof  a !== 'number' || typeof b !== 'number') {
-    //     console.log(`a & b must be numbers`)
-    //     return;
-    // } else {
-    //     console.log(a * b);
-    //     return a * b;
-    // }
-    // console.log(arguments.length);
-    // console.log(typeof arguments);
-    function privateMultiple() {
-        for (let i = 0; i < arguments.length; i++) {
-            let result = arguments[i]*=arguments[i + 1];
-            console.log(result);
-            return arguments[i]*=arguments[i + 1];
+    for (let i = 0; i < arguments.length; i++) {
+        if (typeof arguments[i] !== 'number') {
+            console.log(` Params not a number`);
+            return;
         }
     }
+
+    for (let i = 0; i < arguments.length; i++) {
+        result *= arguments[i]
+    }
+    return result;
 }
 
-// multiple({});
-multiple(10, 4);
+
+console.log(multiple(2, 5, 3, 0.5));
+console.log(multiple(2, 5, 3, {}));

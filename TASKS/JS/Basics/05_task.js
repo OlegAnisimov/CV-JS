@@ -13,7 +13,7 @@ const array = [...str.matchAll(separator)]
 // console.log(array);
 const result = [];
  array.forEach((workArray) => {
-    workArray.forEach((item, index) => {
+    workArray.forEach((item) => {
         result.push(item)
     })
 })

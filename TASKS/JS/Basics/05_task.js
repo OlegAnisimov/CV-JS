@@ -1,13 +1,21 @@
 // https://daruse.ru/zadaniya-po-js-dlya-prokachki
 
-let str  = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut ducimus in odit, omnis quae repellendus voluptatem voluptates. Ab aliquam ea enim eveniet facere illum ipsa maxime quasi sequi vel! Ipsum.'
+let str = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut ducimus in odit, omnis quae repellendus voluptatem voluptates. ' +
+    'Ab aliquam ea enim eveniet facere illum ipsa maxime quasi sequi vel! ' +
+    'Ipsum? GHgflsdngl... Fgyrt.'
 
-function f(str) {
+// const separator = /[\d\.]/; // точка
+const separator = /[A-Z]+[a-z]+/g;
 
-}
-let regExp = /'.'/;
-let regExp1 = /\{Lt}/g;
+const array = [...str.matchAll(separator)]
 
-console.log(f(str.matchAll(/\p{Lt}/gu)));
-// console.log(str.split('.'))
-// console.log(str.split(regExp))
+
+// console.log(array);
+const result = [];
+ array.forEach((workArray) => {
+    workArray.forEach((item, index) => {
+        result.push(item)
+    })
+})
+// console.log(str.split(separator));
+console.log(result)

@@ -1,14 +1,14 @@
 // let
-// let a = 'a';
-// let b = 'b';
-//
-// {
-//     a  = 'new a';
-//     console.log(a);
-//     // console.log(b); // err
-//     let b = 'local b';
-//     console.log(b)
-// }
+let a = 'a';
+let b = 'b';
+
+{
+    a  = 'new a';
+    console.log(a);
+    // console.log(b); // err
+    let b = 'local b';
+    console.log(b)
+}
 // console.log(a);
 // console.log(b);
 

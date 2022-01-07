@@ -1,4 +1,5 @@
 // есть глобальный - Document, Window в браузере, есть локальный внутри ф-ий
+let check = 'check';
 function funcA() {
     let a = 1;
 
@@ -8,6 +9,7 @@ function funcA() {
         function funcC() {
             let c = 3;
             console.log('funcC', a, b, c);
+            console.log(check)
         }
 
         funcC();
